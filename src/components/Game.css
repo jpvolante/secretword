@@ -17,7 +17,8 @@
     display: flex;
 }
 
-.letter, .blankSquare{
+.letter, 
+.blankSquare{
     font-size: 70px;
     line-height: 1.5;
     border: 3px solid #000;
@@ -25,6 +26,7 @@
     width: 100px;
     text-transform: uppercase;
     background-color: #fff;
+    color: #000;
     font-weight: bold;
 }
 
