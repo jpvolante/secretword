@@ -75,7 +75,9 @@ function App() {
     const normalizedLetter = letter.toLowerCase()
 
     //check if letter has already been utilized
-    if(guessedLetters.includes(normalizedLetter) || wrongLetters.includes(normalizedLetter)){
+    if(guessedLetters.includes(normalizedLetter) || 
+      wrongLetters.includes(normalizedLetter)
+    ){
       return;
     }
 
@@ -86,16 +88,16 @@ function App() {
         normalizedLetter,
       ])
     }else{
-      setGuessedLetters((actualWrongLetters) => [
+      setWrongLetters((actualWrongLetters) => [
         ...actualWrongLetters,
         normalizedLetter,
       ]);
     }; 
 
   }
+
   console.log(guessedLetters);
   console.log(wrongLetters);
-
    // restarts the game
    const retry = () => {
     setGameStage(stages[0].name);
